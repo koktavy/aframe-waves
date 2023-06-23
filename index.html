@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Home</title>
+      <!--  A-Frame -->
+      <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+      <script src="./grid.js"></script>
+  </head>
+  <body>
+    <div id="gui">
+      <h1>Home</h1>
+      <p>Home page content goes here.</p>
+    </div>
+    <a-scene>
+      <a-assets>
+        <a-mixin id="cube"
+          geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.1"
+          material="color: blue"></a-mixin>
+      </a-assets>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-entity id="camera" camera look-controls wasd-controls position="0 0 35"></a-entity>
+      <!-- 4697 tiles -->
+      <a-entity id="grid"
+        grid="sizeX: 31; sizeY: 39; verticesX: 61; verticesY: 77"></a-entity>
+    </a-scene>
+  </body>
+</html>
