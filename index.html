@@ -5,24 +5,29 @@
       <title>Home</title>
       <!--  A-Frame -->
       <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+      <script src="http://joeiddon.github.io/perlin/perlin.js"></script>
       <script src="./grid.js"></script>
   </head>
   <body>
-    <div id="gui">
+    <!-- <div id="gui">
       <h1>Home</h1>
       <p>Home page content goes here.</p>
-    </div>
-    <a-scene>
+    </div> -->
+    <a-scene vr-mode-ui="enabled: false">
       <a-assets>
+        <img id="our-lady" src="./lady_les.jpeg">
+        <img id="skybox" src="./les-skybox.jpg">
+        <!-- geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.1" -->
         <a-mixin id="cube"
-          geometry="primitive: box; width: 0.5; height: 0.5; depth: 0.1"
-          material="color: blue"></a-mixin>
+          geometry="primitive: box; width: 1.5; height: 2; depth: 0.1"
+          material="color: white"></a-mixin>
       </a-assets>
-      <a-sky color="#ECECEC"></a-sky>
-      <a-entity id="camera" camera look-controls wasd-controls position="0 0 35"></a-entity>
+      <a-sky color="#ECECEC" rotation="0 90 0" src="#skybox"></a-sky>
+      <a-entity id="camera" camera look-controls wasd-controls position="0 -10 35"></a-entity>
       <!-- 4697 tiles -->
       <a-entity id="grid"
-        grid="sizeX: 31; sizeY: 39; verticesX: 61; verticesY: 77"></a-entity>
+        grid="sizeX: 30; sizeY: 40; verticesX: 20; verticesY: 20"></a-entity>
+        <!--         grid="sizeX: 31; sizeY: 39; verticesX: 61; verticesY: 77"></a-entity> -->
     </a-scene>
   </body>
 </html>
