@@ -58,8 +58,8 @@ AFRAME.registerComponent('grid', {
           entity.setAttribute('animation', {
             property: 'rotation',
             to: `${noise * 40} ${noise * 20} 0`,
-            dur: 1500,
-            delay: 5000 * (noise),
+            dur: 1000,
+            delay: 3000 * (noise),
             easing: 'easeInOutQuad',
             dir: 'alternate',
             loop: true
@@ -69,8 +69,8 @@ AFRAME.registerComponent('grid', {
             property: 'position',
             from: entity.getAttribute('position'),
             to: `${(x / this.verticesX) * this.data.sizeX - this.data.sizeX / 2} ${(y / this.verticesY) * this.data.sizeY - this.data.sizeY / 2} 5`,
-            dur: 3000,
-            delay: 5000 * (noise),
+            dur: 2000,
+            delay: 3000 * (noise),
             dir: 'alternate',
             easing: 'easeInOutQuad',
             loop: true
